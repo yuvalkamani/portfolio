@@ -1,0 +1,60 @@
+.main-experience-container {
+  margin: 5% 3.5%;
+}
+
+.experience-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 3% 0 0 0;
+}
+
+.experience-card-inner {
+  border: 1px #1c1e1f solid;
+  padding: 20px;
+  border-radius: 20px;
+  width: 45%;
+  background-color: #1c1e1f;
+  flex-basis: 40%;
+
+  box-shadow: -1rem 0 3rem #000000;
+}
+
+.experience-card-inner:hover {
+  border: #cc4f4f solid 1px;
+}
+
+.experience-position {
+  font-weight: bolder;
+}
+
+.experience-company {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.experience-duration {
+  position: relative;
+  float: right;
+}
+
+.experience-keypoint {
+  list-style: none;
+  padding: 15px 0 5px 0;
+}
+
+.experience-keypoint::before {
+  content: "\2022 ";
+  color: #cc4f4f;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 870px) {
+  .experience-card-inner {
+    flex-basis: 100%;
+  }
+}
