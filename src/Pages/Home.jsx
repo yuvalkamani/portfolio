@@ -36,8 +36,8 @@ const Home = () => {
   return (
     <div className="main-container">
       <div className="title">
-        Yuval Kaman
-        <span className="red-item">i</span>
+        Yuval Kamani
+        <span className="red-item">.</span>
       </div>
       <div className="personal-info-container">
         <div className="personal-info">
