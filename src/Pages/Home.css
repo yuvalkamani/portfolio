@@ -27,24 +27,36 @@
 }
 
 .about-me {
-  margin-top: 5%;
+  margin-top: 2%;
   text-align: left;
   font-size: 17px;
 }
 
 .skill-logos {
-  margin-top: 5%;
+  margin-top: 4%;
   display: flex;
   gap: 30px;
   justify-content: center;
 }
 
 .contact {
-  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
 }
 
 .contact-item {
   padding: 2px;
+}
+
+.skill-logos .skill-title {
+  margin-bottom: 2%;
+  color: #d6dede;
+  text-align: left;
+}
+
+.contact .skill-title {
+  margin-bottom: 1%;
 }
 
 a:link {

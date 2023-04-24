@@ -67,6 +67,7 @@ const Home = () => {
         </div>
         <div className="skill-logos">
           <div className="skill-languages">
+            <div className="skill-title">languages</div>
             <FaJava className="contact-item" size={30} />
             <FaPython className="contact-item" size={30} />
             <SiC className="contact-item" size={30} />
@@ -77,6 +78,7 @@ const Home = () => {
           </div>
 
           <div className="sill-framworks">
+            <div className="skill-title">frameworks</div>
             <FaReact className="contact-item" size={30} />
             <FaNodeJs className="contact-item" size={30} />
             <SiExpress className="contact-item" size={30} />
@@ -86,6 +88,7 @@ const Home = () => {
             <SiJunit5 className="contact-item" size={30} />
           </div>
           <div className="skill-devtools">
+            <div className="skill-title">dev tools</div>
             <FaGitAlt className="contact-item" size={30} />
             <SiLinux className="contact-item" size={30} />
             <SiAndroidstudio className="contact-item" size={30} />
@@ -96,6 +99,7 @@ const Home = () => {
             <SiJirasoftware className="contact-item" size={30} />
           </div>
         </div>
+        <hr style={{ margin: "2%", opacity: "50%" }} />
         <div className="contact">
           <a
             href="https://www.linkedin.com/in/ykamani/"
