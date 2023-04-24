@@ -48,6 +48,9 @@
 }
 
 @media screen and (max-width: 870px) {
+  .project-card {
+    gap: 10px;
+  }
   .project-card-inner {
     flex-basis: 100%;
   }
