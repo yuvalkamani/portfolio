@@ -47,12 +47,12 @@
   padding: 2px;
 }
 
-.contact-item:hover {
-  color: #cc4f4f;
-}
-
 a:link {
   color: white;
+}
+
+a:hover {
+  color: #cc4f4f;
 }
 
 @media screen and (max-width: 500px) {

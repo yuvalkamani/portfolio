@@ -67,33 +67,33 @@ const Home = () => {
         </div>
         <div className="skill-logos">
           <div className="skill-languages">
-            <FaJava size={30} />
-            <FaPython size={30} />
-            <SiC size={30} />
-            <FaJs size={30} />
-            <FaHtml5 size={30} />
-            <FaCss3Alt size={30} />
-            <FaRProject size={30} />
+            <FaJava className="contact-item" size={30} />
+            <FaPython className="contact-item" size={30} />
+            <SiC className="contact-item" size={30} />
+            <FaJs className="contact-item" size={30} />
+            <FaHtml5 className="contact-item" size={30} />
+            <FaCss3Alt className="contact-item" size={30} />
+            <FaRProject className="contact-item" size={30} />
           </div>
 
           <div className="sill-framworks">
-            <FaReact size={30} />
-            <FaNodeJs size={30} />
-            <SiExpress size={30} />
-            <SiMongodb size={30} />
-            <FaBootstrap size={30} />
-            <SiTailwindcss size={30} />
-            <SiJunit5 size={30} />
+            <FaReact className="contact-item" size={30} />
+            <FaNodeJs className="contact-item" size={30} />
+            <SiExpress className="contact-item" size={30} />
+            <SiMongodb className="contact-item" size={30} />
+            <FaBootstrap className="contact-item" size={30} />
+            <SiTailwindcss className="contact-item" size={30} />
+            <SiJunit5 className="contact-item" size={30} />
           </div>
           <div className="skill-devtools">
-            <FaGitAlt size={30} />
-            <SiLinux size={30} />
-            <SiAndroidstudio size={30} />
-            <FaDocker size={30} />
-            <SiNeo4J size={30} />
-            <SiPostgresql size={30} />
-            <FaFigma size={30} />
-            <SiJirasoftware size={30} />
+            <FaGitAlt className="contact-item" size={30} />
+            <SiLinux className="contact-item" size={30} />
+            <SiAndroidstudio className="contact-item" size={30} />
+            <FaDocker className="contact-item" size={30} />
+            <SiNeo4J className="contact-item" size={30} />
+            <SiPostgresql className="contact-item" size={30} />
+            <FaFigma className="contact-item" size={30} />
+            <SiJirasoftware className="contact-item" size={30} />
           </div>
         </div>
         <div className="contact">
