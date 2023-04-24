@@ -69,7 +69,7 @@ a:hover {
 
 @media screen and (max-width: 500px) {
   .title {
-    font-size: 14.5vw;
+    font-size: 13vw;
   }
   .personal-info {
     margin-top: 10px;
