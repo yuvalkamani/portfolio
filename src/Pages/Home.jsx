@@ -1,8 +1,6 @@
 import React from "react";
 import "./Home.css";
 
-import IconJava from "react-devicon/java/original";
-
 const Home = () => {
   return (
     <div className="main-container">
@@ -35,9 +33,6 @@ const Home = () => {
             some seriously cool tech. From automation to designing, I'm learning
             a ton and having a blast. Life is good!
           </div>
-        </div>
-        <div className="skill-icons">
-          <IconJava />
         </div>
       </div>
     </div>
