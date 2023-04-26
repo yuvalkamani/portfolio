@@ -4,11 +4,11 @@
   flex-direction: column;
   align-content: center;
   text-align: center;
-  margin: 4% 3.5%;
+  margin: 4% 4%;
 }
 
 .title {
-  font-size: 14vw;
+  font-size: 13vw;
   font-weight: bold;
 }
 
