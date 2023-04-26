@@ -5,7 +5,9 @@ import "./Experience.css";
 const Experience = () => {
   return (
     <div className="main-experience-container">
-      <h1 style={{ textAlign: "center" }}>Experience</h1>
+      <h1 style={{ textAlign: "center" }}>
+        Experience<span className="red-item">.</span>
+      </h1>
       <div className="experience-card">
         {experience.map((experience) => {
           return (

@@ -38,6 +38,10 @@
   padding: 15px 0 5px 0;
 }
 
+.red-item {
+  color: #cc4f4f;
+}
+
 .project-keypoint::before {
   content: "\2022 ";
   color: #cc4f4f;

@@ -22,20 +22,20 @@
 
 .personal-info {
   font-weight: 600;
-  font-size: 25px;
+  font-size: 30px;
   text-align: left;
 }
 
 .about-me {
   margin-top: 2%;
   text-align: left;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .skill-logos {
   margin-top: 4%;
   display: flex;
-  gap: 30px;
+  gap: 40px;
   justify-content: center;
 }
 
@@ -72,10 +72,11 @@ a:hover {
     font-size: 13vw;
   }
   .personal-info {
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 17px;
   }
   .about-me {
+    margin-top: 5%;
     font-size: 15px;
   }
 

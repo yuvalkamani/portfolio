@@ -29,6 +29,10 @@
   font-weight: bolder;
 }
 
+.red-item {
+  color: #cc4f4f;
+}
+
 .experience-company {
   font-weight: bold;
   font-style: italic;

@@ -50,19 +50,18 @@ const Home = () => {
         </div>
         <div className="about-me">
           <div>
-            Hey there! I'm third year candidate at UofT and let me tell you, I'm
+            {/* Hey there! I'm third year candidate at UofT and let me tell you, I'm
             a guy who loves his code. In fact, you might say that programming is
             my second language! I'll stick to coding and leave the comedy to the
             professionals. But seriously, if you need someone who's passionate
             about computer science and not afraid to add a little humor to the
-            mix, then I'm your man!
-            <br /> <br />
-          </div>
-          <div>
-            I'm currently a Programming Engineer at Siemens for my co-op. It's
-            like being a coding ninja, developing software solutions that power
-            some seriously cool tech. From automation to designing, I'm learning
-            a ton and having a blast. Life is good!
+            mix, then I'm your man! */}
+            Hello hello! I'm currently a third-year student at UofT, and I have
+            a deep love for coding. You could even say that programming is my
+            second language! While I may not be a comedian, I'm not afraid to
+            add a little humor to the mix if it helps lighten the mood. If
+            you're looking for someone who's passionate about computer science
+            and is always eager to learn more, then I'm the person for the job!
           </div>
         </div>
         <div className="skill-logos">
