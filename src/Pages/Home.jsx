@@ -122,7 +122,7 @@ const Home = () => {
             <SiMinutemailer size={30} className="contact-item" />
           </a>
           <a
-            href="https://homefromcollege.com/r/YK-546"
+            href="https://homefromcollege.com/r/YK-622"
             target="_blank"
             rel="noreferrer"
           >
