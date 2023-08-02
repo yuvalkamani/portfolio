@@ -1,21 +1,39 @@
 export const projects = [
   {
+    name: "Trade AI (Bot)",
+    skills: "Node.js, OpenAI API, WebSockets ",
+    keypoints: [
+      "Developed an AI trading bot in Node.js that gets real-time news data and leverages sentiment analysis to make informed decisions",
+      "Integrated the OpenAI API to feed news data as prompts and obtained sentiment values of news headlines for decision making",
+      "Used web sockets to get news data from the Alpaca API and enabling automated trading of stocks based on AI-generated responses, performing over 300 automatic trades and profiting $1000+ in a fortnight",
+    ],
+  },
+  {
+    name: "rflect (Journaling)",
+    skills: "React Native, Git, Figma",
+    keypoints: [
+      "Created a React Native application to write and save journals on a phone, encouraging users to develop a habit of journaling",
+      "Used advanced hooks to handle complex user interactions whilst managing the application’s state and ensuring fast performance",
+      "Implemented seamless navigation using React Navigation, delivering easy access to features through effective parameter passing",
+    ],
+  },
+  {
     name: "FitHub",
     skills:
       "React, ExpressJS, MongoDB, NodeJS, HTML, CSS, Jira, Figma, Tailwind CSS, Git",
     keypoints: [
-      "Designed a social fitness application using MongoDB, ExpressJS, ReactJS and NodeJS, incorporating a Three-Tier Architecture and enabling users to interact, plan and log workouts with friends to promote a healthy lifestyle",
-      "Designed the UI/UX on Figma and implemented the frontend of 5 pages in React and Tailwind CSS, ensuring interactive and visually appealing user experience",
-      "Used Agile Development methodology to deliver frequent updates through bi-weekly sprints, whilst tracking progress on Jira and Git",
+      "Built a social fitness application using the MERN stack, incorporating a Three-Tier Architecture and enabling users to interact, plan and log workouts with friends to promote a healthier and more physical lifestyle",
+      "Design the UI/UX on Figma and developed interactive and visually appealing front-end in React and Tailwind CSS",
+      "Used Agile Development methodology to deliver frequent updates through bi-weekly sprints, tracking progress on Jira and Git",
     ],
   },
   {
     name: "Zoomer (Uber Clone)",
     skills: "Java, Neo4j, PostgreSQL, MongoDB, Git, Docker, API Gateway",
     keypoints: [
-      "Programmed microservices architecture of multiple Java APIs with PostgreSQL, MongoDB and Neo4j databases using the Java Maven framework",
-      "Developed an API Gateway to facilitate user communication with the microservices and ensured efficient routing of requests",
-      "Used CI/CD methodology to conduct comprehensive tests for all API endpoints, achieving over 90% coverage and ensuring expected response headers were met",
+      "Programmed microservices architecture of multiple Java APIs with PostgreSQL, MongoDB and Neo4j databases using the Apache Maven framework",
+      "Developed an API Gateway to facilitate user communication with the microservices and ensured efficient routing of HTTP requests",
+      "Used CI/CD to comprehensively test all API endpoints, achieving 90% coverage and ensured expected response headers were met",
     ],
   },
   {
