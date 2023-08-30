@@ -98,7 +98,10 @@ const Home = () => {
             <SiJirasoftware className="contact-item" size={30} />
           </div>
         </div>
-        <hr style={{ margin: "2%", opacity: "50%" }} />
+        <hr
+          className="horizontal-rule"
+          style={{ margin: "2%", opacity: "50%" }}
+        />
         <div className="contact">
           <a
             href="https://www.linkedin.com/in/ykamani/"
