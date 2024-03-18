@@ -1,9 +1,12 @@
 import React from "react";
+import { mainDiv } from "./CSSConstants";
 
 const Extras = () => {
   return (
-    <div className="snap-start flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-b from-[#20385E] to-[#2D4F84]">
-      <h1 className="text-4xl font-bold text-white">Extras</h1>
+    <div className={`${mainDiv} bg-gradient-to-b from-[#20385E] to-[#2D4F84]`}>
+      <div className="w-full max-w-4xl">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">Extras</h1>
+      </div>
     </div>
   );
 };

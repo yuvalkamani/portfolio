@@ -8,7 +8,7 @@ import Extras from "@/components/Extras";
 export default function Home() {
   return (
     <div>
-      <div className="max-h-screen snap-mandatory snap-y overflow-y-scroll">
+      <div className="max-h-screen max-w-screen snap-mandatory snap-y overflow-y-scroll">
         <LandingPage />
         <AboutMe />
         <Education />
