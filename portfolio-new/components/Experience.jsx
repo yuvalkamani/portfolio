@@ -9,6 +9,7 @@ const Experience = () => {
           Experience
         </h1>
       </div>
+      <div class="flex overflow-x-auto space-x-4 snap-x max-w-60 snap-mandatory"></div>
     </div>
   );
 };
