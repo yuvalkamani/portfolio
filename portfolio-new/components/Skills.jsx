@@ -6,13 +6,9 @@ const Skills = () => {
     <div className={`${mainDiv} bg-gradient-to-b from-[#090F26] to-[#101F38]`}>
       <div className="w-full max-w-4xl">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">Skills</h1>
-        <p className="mt-6 text-base md:text-lg lg:text-xl">
-          Just a heads up: this section accidentally turned into a brag-list (my
-          bad).
-        </p>
       </div>
-      <div className="flex flex-wrap max-w-4xl w-full mt-6">
-        <div className="w-1/3 md:text-base lg:text-lg">
+      <div className="flex flex-wrap max-w-4xl w-full mt-6 md:text-lg lg:text-xl">
+        <div className="w-1/3">
           <div className="font-bold">Languages</div>
           <ul className="mt-6">
             <li>Java</li>

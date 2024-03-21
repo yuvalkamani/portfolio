@@ -8,7 +8,7 @@ const AboutMe = () => {
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">About Me</h1>
         <p className="mt-6 text-base md:text-lg lg:text-xl">
           I'm Yuval, a software engineer fueled by coffee, code, and a
-          ever-ending educational journey, ocassionally sidetracked by
+          never-ending educational journey, ocassionally sidetracked by
           bingewatching shows. Currently challenged everyday at UofT (can't wait
           to graduate).
         </p>
