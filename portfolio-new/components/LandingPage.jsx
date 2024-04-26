@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { mainDiv } from "./CSSConstants";
+import { mainDiv } from "./Constants";
 
 const LandingPage = () => {
   return (

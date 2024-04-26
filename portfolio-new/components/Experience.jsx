@@ -1,5 +1,6 @@
 import React from "react";
-import { mainDiv } from "./CSSConstants";
+import { mainDiv, EXPERIENCE } from "./Constants";
+import Card from "./Card";
 
 const Experience = () => {
   return (
@@ -9,7 +10,11 @@ const Experience = () => {
           Experience
         </h1>
       </div>
-      <div class="flex overflow-x-auto space-x-4 snap-x max-w-60 snap-mandatory"></div>
+      <div className="flex overflow-x-auto snap-x snap-mandatory space-x-4 max-w-4xl sm:w-1/3 w-2/3 mt-12 md:text-lg lg:text-xl hide-scrollbar">
+        {Object.values(EXPERIENCE).map((data) => {
+          return <Card data={data} />;
+        })}
+      </div>
     </div>
   );
 };
