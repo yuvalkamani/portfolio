@@ -8,7 +8,7 @@ const Skills = () => {
       <div className="w-full max-w-4xl">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">Skills</h1>
       </div>
-      <div className="flex overflow-x-auto snap-x snap-mandatory space-x-4 max-w-4xl sm:w-1/3 w-2/3 mt-12 md:text-lg lg:text-xl hide-scrollbar">
+      <div className="flex overflow-x-auto snap-x snap-mandatory space-x-4 max-w-4xl sm:w-1/3 w-3/4 mt-12 md:text-lg lg:text-xl hide-scrollbar">
         {Object.values(SKILLS).map((data) => {
           return <Card data={data} />;
         })}
