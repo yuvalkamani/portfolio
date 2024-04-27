@@ -10,7 +10,7 @@ const Experience = () => {
           Experience
         </h1>
       </div>
-      <div className="flex overflow-x-auto snap-x snap-mandatory space-x-4 max-w-4xl sm:w-1/3 w-3/4 mt-12 md:text-lg lg:text-xl hide-scrollbar">
+      <div className="flex overflow-x-auto snap-x snap-mandatory space-x-4 max-w-4xl sm:w-1/3 w-full mt-12 md:text-lg lg:text-xl">
         {Object.values(EXPERIENCE).map((data) => {
           return <Card data={data} />;
         })}

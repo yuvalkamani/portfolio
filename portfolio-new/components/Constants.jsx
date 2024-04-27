@@ -74,3 +74,35 @@ export const EXPERIENCE = {
       "Designed and developed the organization's website from scratch. Won Executive of the Year award.",
   },
 };
+
+export const PROJECTS = {
+  langchain: {
+    title: "LangChain Contribution (Merged)",
+    description: "Incorporated the StackExchange API to the LangChain LLM.",
+  },
+  ratemy: {
+    title: "Rate My",
+    description:
+      "A web application for UofT students, offering an anonymous platform to share comprehensive feedback on courses and professors.",
+  },
+  tradeai: {
+    title: "Trade AI",
+    description:
+      "An AI system that utilizes real-time news analysis to make informed trading decisions and automatically execute trades on the Alpaca Trading platform.",
+  },
+  fithub: {
+    title: "FitHub",
+    description:
+      "A social fitness web application enabling users to interact, plan and log workouts with friends to promote a healthy lifestyle",
+  },
+  zoomer: {
+    title: "Zoomer (Uber Clone)",
+    description:
+      "A Java-based Uber Clone designed with extensive functionality, incorporating multiple interconnected databases using microservices.",
+  },
+  android: {
+    title: "Android Medical Application",
+    description:
+      "A medical booking Android application used to book a medical appointments",
+  },
+};

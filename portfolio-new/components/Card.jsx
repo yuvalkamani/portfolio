@@ -4,7 +4,7 @@ const Card = ({ data }) => {
   return (
     <div className="snap-center shrink-0 w-11/12">
       <div className="border rounded-lg p-4 shadow-lg">
-        <div className="font-bold">{data.title}</div>
+        <div className="font-bold text-xl">{data.title}</div>
         {data.position ? (
           <div className="text-lg">{data.position}</div>
         ) : (
