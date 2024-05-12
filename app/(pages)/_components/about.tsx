@@ -91,40 +91,31 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
   const { ref, controls } = useAnimatedEntry();
 
   return (
-    <motion.div
-      key={content.id}
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={slideUpVariants}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+    <Card
+      className={`border border-transparent border-t-[1px] h-fit ${
+        index === 0 || index === 1
+          ? "border-t-purple-500"
+          : "border-t-orange-500"
+      }`}
     >
-      <Card
-        className={`border border-transparent border-t-[1px] h-fit ${
-          index === 0 || index === 1
-            ? "border-t-purple-500"
-            : "border-t-orange-500"
-        }`}
-      >
-        <CardHeader>
-          <CardTitle className="text-3xl sm:text-4xl custom-md:text-5xl">
-            {content.title}
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="text-base custom-md:text-xl sm:text-lg">
-          {content.list != undefined && content.list ? (
-            <ul>
-              {Array.isArray(content.content) &&
-                content.content.map((listElem, i) => {
-                  return <li key={i}>{listElem}</li>;
-                })}
-            </ul>
-          ) : (
-            `${content.content}`
-          )}
-        </CardContent>
-      </Card>
-    </motion.div>
+      <CardHeader>
+        <CardTitle className="text-3xl sm:text-4xl custom-md:text-5xl">
+          {content.title}
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="text-base custom-md:text-xl sm:text-lg">
+        {content.list != undefined && content.list ? (
+          <ul>
+            {Array.isArray(content.content) &&
+              content.content.map((listElem, i) => {
+                return <li key={i}>{listElem}</li>;
+              })}
+          </ul>
+        ) : (
+          `${content.content}`
+        )}
+      </CardContent>
+    </Card>
   );
 };
 
