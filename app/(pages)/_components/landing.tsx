@@ -67,7 +67,7 @@ export const Landing = () => {
         />
       </div>
       <div>
-        <ChevronDown className="h-4 w-4 mb-28 sm:h-5 sm:w-5 md:h-6 md:w-6 animate-bounce rounded-full" />
+        <ChevronDown className="h-4 w-4 mb-28 sm:h-5 sm:w-5 md:h-6 md:w-6 animate-bounce" />
       </div>
     </div>
   );
