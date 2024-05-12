@@ -114,9 +114,10 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
         <CardContent className="text-base md:text-xl sm:text-lg overflow-hidden">
           {content.list != undefined && content.list ? (
             <ul>
-              {content.content.map((listElem, i) => {
-                return <li key={i}>{listElem}</li>;
-              })}
+              {Array.isArray(content.content) &&
+                content.content.map((listElem, i) => {
+                  return <li key={i}>{listElem}</li>;
+                })}
             </ul>
           ) : (
             `${content.content}`
