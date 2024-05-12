@@ -130,7 +130,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
 
 export const About = () => {
   return (
-    <div className="h-screen snap-start text-center sm:text-left gap-3 p-12 custom-md:p-[135px] md:p-[90px] grid grid-cols-1 sm:grid-cols-2">
+    <div className="h-screen snap-start text-center sm:text-left gap-3 p-12 custom-md:p-[135px] md:p-[90px] grid grid-cols-1 sm:grid-cols-2 overflow-auto no-scrollbar">
       {CONTENTS.map((content, index) => (
         <ContentCard content={content} index={index} key={content.id} />
       ))}
