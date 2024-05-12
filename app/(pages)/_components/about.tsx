@@ -15,7 +15,7 @@ const CONTENTS = [
   {
     id: 1,
     title: "Interests",
-    content: ["Football", "Formula 1", "Traveling", "Music"],
+    content: ["⚽️ Football ", "🏎 Formula 1", "✈️ Traveling", "🎶 Music"],
     list: true,
   },
   {
