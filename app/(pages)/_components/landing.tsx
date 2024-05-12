@@ -33,7 +33,7 @@ const squareMotion = {
 
 export const Landing = () => {
   return (
-    <div className="h-screen snap-start flex flex-col justify-between items-center max-h-screen max-w-screen overflow-hidden">
+    <div className="h-screen snap-none sm:snap-start flex flex-col justify-between items-center max-h-screen max-w-screen overflow-hidden">
       <div className="relative h-screen gap-y-4 flex flex-col justify-center px-[107px]">
         <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold z-[99999]">
           Yuval Kamani
