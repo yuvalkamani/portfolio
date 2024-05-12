@@ -60,21 +60,26 @@ const slideUpVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
+const useAnimatedEntry = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  return { ref, controls };
+};
+
 export const About = () => {
   return (
     <div className="h-screen snap-start text-center sm:text-left gap-3 p-12 custom-md:p-[135px] md:p-[90px] grid grid-cols-1 sm:grid-cols-2">
       {CONTENTS.map((CONTENT, index) => {
-        // Animation controls and view observer for each card
-        const controls = useAnimation();
-        const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-
-        useEffect(() => {
-          if (inView) {
-            controls.start("visible");
-          } else {
-            controls.start("hidden");
-          }
-        }, [controls, inView]);
+        const { ref, controls } = useAnimatedEntry();
 
         return (
           <motion.div
