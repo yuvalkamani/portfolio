@@ -11,7 +11,7 @@ const config = {
   prefix: "",
   theme: {
     screens: {
-      "custom-md": "900px",
+      "custom-md": "1000px",
       sm: "640px",
       md: "768px",
       lg: "1024px",

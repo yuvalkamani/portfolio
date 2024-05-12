@@ -107,7 +107,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
         }`}
       >
         <CardHeader>
-          <CardTitle className="text-3xl sm:text-4xl custon-md:text-5xl">
+          <CardTitle className="text-3xl sm:text-4xl custom-md:text-5xl">
             {content.title}
           </CardTitle>
         </CardHeader>
@@ -130,7 +130,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
 
 export const About = () => {
   return (
-    <div className="snap-none sm:snap-start text-center sm:text-left gap-3 p-12 custom-md:p-[130px] grid grid-cols-1 sm:grid-cols-2">
+    <div className="snap-none sm:snap-start text-center sm:text-left gap-3 p-12 sm:p-[90px] custom-md:p-[130px] grid grid-cols-1 sm:grid-cols-2">
       {CONTENTS.map((content, index) => (
         <ContentCard content={content} index={index} key={content.id} />
       ))}
