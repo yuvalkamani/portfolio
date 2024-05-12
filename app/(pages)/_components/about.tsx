@@ -75,48 +75,64 @@ const useAnimatedEntry = () => {
   return { ref, controls };
 };
 
+type Content = {
+  id: number;
+  title: string;
+  content: string[] | string;
+  list?: boolean;
+};
+
+type ContentCardProps = {
+  content: Content;
+  index: number;
+};
+
+const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
+  const { ref, controls } = useAnimatedEntry();
+
+  return (
+    <motion.div
+      key={content.id}
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={slideUpVariants}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <Card
+        className={`border border-transparent border-t-[1px] ${
+          index === 0 || index === 1
+            ? "border-t-purple-500"
+            : "border-t-orange-500"
+        }`}
+      >
+        <CardHeader>
+          <CardTitle className="text-3xl sm:text-4xl md:text-5xl overflow-hidden">
+            {content.title}
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="text-base md:text-xl sm:text-lg overflow-hidden">
+          {content.list != undefined && content.list ? (
+            <ul>
+              {content.content.map((listElem, i) => {
+                return <li key={i}>{listElem}</li>;
+              })}
+            </ul>
+          ) : (
+            `${content.content}`
+          )}
+        </CardContent>
+      </Card>
+    </motion.div>
+  );
+};
+
 export const About = () => {
   return (
     <div className="h-screen snap-start text-center sm:text-left gap-3 p-12 custom-md:p-[135px] md:p-[90px] grid grid-cols-1 sm:grid-cols-2">
-      {CONTENTS.map((CONTENT, index) => {
-        const { ref, controls } = useAnimatedEntry();
-
-        return (
-          <motion.div
-            key={CONTENT.id}
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={slideUpVariants}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <Card
-              className={`border border-transparent border-t-[1px] ${
-                index === 0 || index === 1
-                  ? "border-t-purple-500"
-                  : "border-t-orange-500"
-              }`}
-            >
-              <CardHeader>
-                <CardTitle className="text-3xl sm:text-4xl md:text-5xl overflow-hidden">
-                  {CONTENT.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-base md:text-xl sm:text-lg overflow-hidden">
-                {CONTENT.list != undefined && CONTENT.list ? (
-                  <ul>
-                    {CONTENT.content.map((listElem, i) => {
-                      return <li key={i}>{listElem}</li>;
-                    })}
-                  </ul>
-                ) : (
-                  `${CONTENT.content}`
-                )}
-              </CardContent>
-            </Card>
-          </motion.div>
-        );
-      })}
+      {CONTENTS.map((content, index) => (
+        <ContentCard content={content} index={index} key={content.id} />
+      ))}
     </div>
   );
 };
