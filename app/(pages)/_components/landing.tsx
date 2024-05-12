@@ -66,7 +66,9 @@ export const Landing = () => {
           className="absolute h-60 w-60 rounded-full hidden sm:block right-0 bg-gradient-to-r from-[#439cfb] to-[#f187fb] blur-[45px] animate-pulse"
         />
       </div>
-      <ChevronDown className="h-4 w-4 mb-28 sm:h-5 sm:w-5 md:h-6 md:w-6 animate-bounce" />
+      <div>
+        <ChevronDown className="h-4 w-4 mb-28 sm:h-5 sm:w-5 md:h-6 md:w-6 animate-bounce rounded-full" />
+      </div>
     </div>
   );
 };
