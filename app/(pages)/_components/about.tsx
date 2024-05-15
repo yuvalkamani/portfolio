@@ -1,9 +1,6 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 
 const CONTENTS = [
   {
@@ -74,7 +71,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
         index === 0 || index === 1
           ? "border-t-purple-500"
           : "border-t-orange-500"
-      }`}
+      } ${index === CONTENTS.length - 1 && "pb-12"}`}
     >
       <CardHeader>
         <CardTitle className="text-zinc-100">{content.title}</CardTitle>
@@ -97,7 +94,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
 
 export const About = () => {
   return (
-    <div className="h-screen lg:overflow-hidden overflow-y-scroll snap-start text-center sm:text-left gap-3 p-12 sm:p-[90px] custom-md:p-[130px] grid grid-cols-1 sm:grid-cols-2 no-scrollbar">
+    <div className="h-screen w-screen overflow-auto snap-start text-center sm:text-left gap-3 p-12 sm:p-[90px] custom-md:p-[130px] grid grid-cols-1 sm:grid-cols-2 no-scrollbar">
       {CONTENTS.map((content, index) => (
         <ContentCard content={content} index={index} key={content.id} />
       ))}
