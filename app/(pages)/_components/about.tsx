@@ -71,7 +71,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
         index === 0 || index === 1
           ? "border-t-purple-500"
           : "border-t-orange-500"
-      } ${index === CONTENTS.length - 1 && "sm:pb-12"}`}
+      }`}
     >
       <CardHeader>
         <CardTitle className="text-zinc-100">{content.title}</CardTitle>
@@ -94,10 +94,12 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
 
 export const About = () => {
   return (
-    <div className="sm:h-screen w-screen sm:overflow-auto md:overflow-hidden snap-start text-center sm:text-left gap-3 p-12 sm:p-[90px] custom-md:p-[130px] grid grid-cols-1 sm:grid-cols-2 no-scrollbar">
-      {CONTENTS.map((content, index) => (
-        <ContentCard content={content} index={index} key={content.id} />
-      ))}
+    <div className="sm:h-screen w-screen sm:overflow-auto md:overflow-hidden snap-start text-center sm:text-left no-scrollbar flex items-center justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-12 sm:p-[90px] custom-md:p-[130px]">
+        {CONTENTS.map((content, index) => (
+          <ContentCard content={content} index={index} key={content.id} />
+        ))}
+      </div>
     </div>
   );
 };
