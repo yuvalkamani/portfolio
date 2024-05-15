@@ -100,18 +100,16 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
       transition={{ duration: 0.2, ease: "easeOut" }}
     >
       <Card
-        className={`border border-transparent border-t-[1px] h-fit ${
+        className={`border border-transparent border-t-2 h-fit ${
           index === 0 || index === 1
             ? "border-t-purple-500"
             : "border-t-orange-500"
         }`}
       >
         <CardHeader>
-          <CardTitle className="text-3xl sm:text-4xl custom-md:text-5xl">
-            {content.title}
-          </CardTitle>
+          <CardTitle className="text-zinc-100">{content.title}</CardTitle>
         </CardHeader>
-        <CardContent className="text-base custom-md:text-xl sm:text-lg">
+        <CardContent className="leading-relaxed tracking-wide text-zinc-300">
           {content.list != undefined && content.list ? (
             <ul>
               {Array.isArray(content.content) &&
@@ -130,7 +128,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
 
 export const About = () => {
   return (
-    <div className="lg:overflow-hidden overflow-scroll h-screen snap-start text-center sm:text-left gap-3 p-12 sm:p-[90px] custom-md:p-[130px] grid grid-cols-1 sm:grid-cols-2 no-scrollbar">
+    <div className="h-screen lg:overflow-hidden overflow-y-scroll snap-start text-center sm:text-left gap-3 p-12 sm:p-[90px] custom-md:p-[130px] grid grid-cols-1 sm:grid-cols-2 no-scrollbar">
       {CONTENTS.map((content, index) => (
         <ContentCard content={content} index={index} key={content.id} />
       ))}
