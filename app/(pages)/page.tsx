@@ -4,7 +4,7 @@ import { Projects } from "./_components/projects";
 
 export default function Home() {
   return (
-    <div className="max-h-screen snap-y snap-mandatory overflow-y-scroll text-center no-scrollbar">
+    <div className="sm:max-h-screen max-h-fit snap-y snap-mandatory sm:overflow-y-scroll text-center no-scrollbar">
       <Landing />
       <About />
       <Projects />
