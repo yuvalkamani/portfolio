@@ -2,7 +2,7 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 export function Projects() {
   return (
-    <div className="h-screen  overflow-y-scroll snap-start text-left flex flex-col justify-start items-center py-12 sm:py-[80px] custom-md:py-16">
+    <div className="h-screen  overflow-y-scroll snap-start text-left flex flex-col justify-start items-center py-12 sm:py-[80px] custom-md:py-16 no-scrollbar">
       <h1 className="text-3xl sm:text-4xl custom-md:text-5xl font-bold ">
         Projects
       </h1>
