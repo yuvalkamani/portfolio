@@ -71,7 +71,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
         index === 0 || index === 1
           ? "border-t-purple-500"
           : "border-t-orange-500"
-      } ${index === CONTENTS.length - 1 && "pb-12"}`}
+      } ${index === CONTENTS.length - 1 && "sm:pb-12"}`}
     >
       <CardHeader>
         <CardTitle className="text-zinc-100">{content.title}</CardTitle>
