@@ -55,26 +55,6 @@ const CONTENTS = [
   },
 ];
 
-const slideUpVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 },
-};
-
-const useAnimatedEntry = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
-
-  return { ref, controls };
-};
-
 type Content = {
   id: number;
   title: string;
@@ -88,41 +68,30 @@ type ContentCardProps = {
 };
 
 const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
-  const { ref, controls } = useAnimatedEntry();
-
   return (
-    <motion.div
-      key={content.id}
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={slideUpVariants}
-      transition={{ duration: 0.2, ease: "easeOut" }}
+    <Card
+      className={`border border-transparent border-t-2 h-fit ${
+        index === 0 || index === 1
+          ? "border-t-purple-500"
+          : "border-t-orange-500"
+      }`}
     >
-      <Card
-        className={`border border-transparent border-t-2 h-fit ${
-          index === 0 || index === 1
-            ? "border-t-purple-500"
-            : "border-t-orange-500"
-        }`}
-      >
-        <CardHeader>
-          <CardTitle className="text-zinc-100">{content.title}</CardTitle>
-        </CardHeader>
-        <CardContent className="leading-relaxed tracking-wide text-zinc-300">
-          {content.list != undefined && content.list ? (
-            <ul>
-              {Array.isArray(content.content) &&
-                content.content.map((listElem, i) => {
-                  return <li key={i}>{listElem}</li>;
-                })}
-            </ul>
-          ) : (
-            `${content.content}`
-          )}
-        </CardContent>
-      </Card>
-    </motion.div>
+      <CardHeader>
+        <CardTitle className="text-zinc-100">{content.title}</CardTitle>
+      </CardHeader>
+      <CardContent className="leading-relaxed tracking-wide text-zinc-300">
+        {content.list != undefined && content.list ? (
+          <ul>
+            {Array.isArray(content.content) &&
+              content.content.map((listElem, i) => {
+                return <li key={i}>{listElem}</li>;
+              })}
+          </ul>
+        ) : (
+          `${content.content}`
+        )}
+      </CardContent>
+    </Card>
   );
 };
 
