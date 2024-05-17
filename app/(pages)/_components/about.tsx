@@ -121,8 +121,8 @@ const CONTENTS = [
 
 export const About = () => {
   return (
-    <div className="sm:h-screen w-screen sm:overflow-auto snap-start p-10 sm:p-[80px] custom-md:p-[150px] no-scrollbar">
-      <div className="flex justify-center items-start custom-md:items-center w-full h-full">
+    <div className="sm:h-screen w-screen sm:overflow-auto snap-start text-left p-10 sm:p-[80px] custom-md:p-16 no-scrollbar">
+      <div className="flex flex-col justify-start items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:pb-10">
           {CONTENTS.map((content, idx) => {
             return (
