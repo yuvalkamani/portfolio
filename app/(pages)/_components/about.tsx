@@ -1,6 +1,27 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { DiJava, DiNodejsSmall } from "react-icons/di";
+import {
+  SiC,
+  SiTypescript,
+  SiJavascript,
+  SiPython,
+  SiHtml5,
+  SiCss3,
+  SiHaskell,
+  SiRacket,
+  SiReact,
+  SiExpress,
+  SiMongodb,
+  SiPostgresql,
+  SiTailwindcss,
+  SiBootstrap,
+  SiJunit5,
+} from "react-icons/si";
+import { BsFiletypeSql } from "react-icons/bs";
+import { RiNextjsFill } from "react-icons/ri";
+import { BiFootball } from "react-icons/bi";
 
 const CONTENTS = [
   {
@@ -12,93 +33,90 @@ const CONTENTS = [
   {
     id: 1,
     title: "Interests",
-    content: ["⚽️ Football ", "🏎 Formula 1", "✈️ Traveling", "🎶 Music"],
+    content: [
+      "⚽️ Football ",
+      "🏎 Formula 1",
+      "✈️ Traveling",
+      "🎶 Music",
+      "🍿 Netflix",
+      "🧗🏼 Hiking",
+    ],
     list: true,
   },
   {
     id: 2,
     title: "Languages",
     content: [
-      "Java",
-      "C",
-      "Python",
-      "Javascript",
-      "Typescript",
-      "HTML",
-      "CSS",
-      "Racket",
-      "Haskell",
-      "SQL",
+      <DiJava size={50} />,
+      <SiJavascript size={40} />,
+      <SiC size={40} />,
+      <SiPython size={40} />,
+      <SiTypescript size={40} />,
+      <SiHtml5 size={40} />,
+      <SiCss3 size={40} />,
+      <SiHaskell size={40} />,
+      <SiRacket size={40} />,
+      <BsFiletypeSql size={40} />,
     ],
     list: true,
+    icons: true,
   },
   {
     id: 3,
     title: "Frameworks",
     content: [
-      "Next.js",
-      "React",
-      "Node",
-      "Express",
-      "MongoDB",
-      "React Native",
-      "PostgreSQL",
-      "Tailwind CSS",
-      "Bootstrap",
-      "JUnit",
-      "JavaFX",
+      <RiNextjsFill size={50} />,
+      <SiReact size={40} />,
+      <DiNodejsSmall size={50} />,
+      <SiExpress size={40} />,
+      <SiMongodb size={40} />,
+      <SiPostgresql size={40} />,
+      <SiTailwindcss size={40} />,
+      <SiBootstrap size={40} />,
+      <SiJunit5 size={40} />,
     ],
     list: true,
+    icons: true,
   },
 ];
 
-type Content = {
-  id: number;
-  title: string;
-  content: string[] | string;
-  list?: boolean;
-};
-
-type ContentCardProps = {
-  content: Content;
-  index: number;
-};
-
-const ContentCard: React.FC<ContentCardProps> = ({ content, index }) => {
-  return (
-    <Card
-      className={`border border-transparent border-t-2 h-fit ${
-        index === 0 || index === 1
-          ? "border-t-purple-500"
-          : "border-t-orange-500"
-      }`}
-    >
-      <CardHeader>
-        <CardTitle className="text-zinc-100">{content.title}</CardTitle>
-      </CardHeader>
-      <CardContent className="leading-relaxed tracking-wide text-zinc-300">
-        {content.list != undefined && content.list ? (
-          <ul>
-            {Array.isArray(content.content) &&
-              content.content.map((listElem, i) => {
-                return <li key={i}>{listElem}</li>;
-              })}
-          </ul>
-        ) : (
-          `${content.content}`
-        )}
-      </CardContent>
-    </Card>
-  );
-};
-
 export const About = () => {
   return (
-    <div className="sm:h-screen w-screen sm:overflow-auto md:overflow-hidden snap-start text-center sm:text-left no-scrollbar flex items-center justify-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-12 sm:p-[90px] custom-md:p-[130px]">
-        {CONTENTS.map((content, index) => (
-          <ContentCard content={content} index={index} key={content.id} />
-        ))}
+    <div className="sm:h-screen w-screen sm:overflow-auto snap-start text-left p-10 sm:p-[80px] custom-md:p-[150px] no-scrollbar">
+      <div className="flex justify-center items-start custom-md:items-center w-full h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:pb-10">
+          {CONTENTS.map((content, idx) => {
+            return (
+              <BackgroundGradient
+                key={content.id}
+                className="rounded-2xl w-full p-7 h-full sm:p-10 bg-[#141414]"
+                evenIndex={idx === 0 || idx === 1}
+              >
+                <p className="mt-2 mb-7 text-lg sm:text-2xl font-bold text-center">
+                  {content.title}
+                </p>
+                <div className="text-zinc-300 mb-7">
+                  {content.list != undefined && content.list ? (
+                    <div
+                      className={`w-2/3 sm:w-2/4 ${
+                        content.icons
+                          ? "flex justify-around items-center flex-wrap"
+                          : "text-center"
+                      } gap-5 mx-auto`}
+                    >
+                      {Array.isArray(content.content) &&
+                        content.content.map((listElem, i) => {
+                          return <div>{listElem}</div>;
+                        })}
+                    </div>
+                  ) : (
+                    `${content.content}`
+                  )}
+                </div>
+              </BackgroundGradient>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
