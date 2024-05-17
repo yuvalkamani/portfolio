@@ -107,7 +107,7 @@ const CONTENTS = [
 
 export const About = () => {
   return (
-    <div className="sm:h-screen w-screen sm:overflow-auto snap-start text-left p-10 sm:p-[80px] custom-md:p-[150px] no-scrollbar">
+    <div className="sm:h-screen w-screen sm:overflow-auto snap-start p-10 sm:p-[80px] custom-md:p-[150px] no-scrollbar">
       <div className="flex justify-center items-start custom-md:items-center w-full h-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:pb-10">
           {CONTENTS.map((content, idx) => {
@@ -120,7 +120,7 @@ export const About = () => {
                 <p className="mt-2 mb-7 text-lg sm:text-2xl font-bold text-center">
                   {content.title}
                 </p>
-                <div className="text-zinc-300 mb-7">
+                <div className="text-zinc-300">
                   {content.list != undefined && content.list ? (
                     <div
                       className={`w-2/3 sm:w-2/4 ${
