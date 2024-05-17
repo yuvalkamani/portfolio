@@ -25,6 +25,13 @@ import {
   SiBootstrap,
   SiJunit5,
   SiSwift,
+  SiAndroid,
+  SiXcode,
+  SiGit,
+  SiDocker,
+  SiFigma,
+  SiDrupal,
+  SiOpenai,
 } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
 import { RiNextjsFill } from "react-icons/ri";
@@ -76,7 +83,7 @@ const CONTENTS = [
   },
   {
     id: 3,
-    title: "Frameworks",
+    title: "Frameworks & Tools",
     content: [
       { icon: <RiNextjsFill key="nextjs" size={50} />, language: "Next.js" },
       {
@@ -99,6 +106,13 @@ const CONTENTS = [
         language: "Bootstrap",
       },
       { icon: <SiJunit5 key="junit5" size={40} />, language: "JUnit" },
+      { icon: <SiAndroid key="android" size={40} />, language: "Android" },
+      { icon: <SiXcode key="xcode" size={40} />, language: "XCode" },
+      { icon: <SiGit key="git" size={40} />, language: "Git" },
+      { icon: <SiDocker key="docker" size={40} />, language: "Docker" },
+      { icon: <SiFigma key="figma" size={40} />, language: "Figma" },
+      { icon: <SiDrupal key="drupal" size={40} />, language: "Drupal" },
+      { icon: <SiOpenai key="openai" size={40} />, language: "OpenAI" },
     ],
     list: true,
     icons: true,
