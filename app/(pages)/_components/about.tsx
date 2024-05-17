@@ -1,5 +1,11 @@
 "use client";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { DiJava, DiNodejsSmall } from "react-icons/di";
 import {
@@ -18,10 +24,10 @@ import {
   SiTailwindcss,
   SiBootstrap,
   SiJunit5,
+  SiSwift,
 } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
 import { RiNextjsFill } from "react-icons/ri";
-import { BiFootball } from "react-icons/bi";
 
 const CONTENTS = [
   {
@@ -47,16 +53,23 @@ const CONTENTS = [
     id: 2,
     title: "Languages",
     content: [
-      <DiJava key="java" size={50} />,
-      <SiJavascript key="javascript" size={40} />,
-      <SiC key="c" size={40} />,
-      <SiPython key="python" size={40} />,
-      <SiTypescript key="typescript" size={40} />,
-      <SiHtml5 key="html5" size={40} />,
-      <SiCss3 key="css3" size={40} />,
-      <SiHaskell key="haskell" size={40} />,
-      <SiRacket key="racket" size={40} />,
-      <BsFiletypeSql key="sql" size={40} />,
+      { icon: <DiJava key="java" size={50} />, language: "Java" },
+      {
+        icon: <SiJavascript key="javascript" size={40} />,
+        language: "JavaScript",
+      },
+      { icon: <SiC key="c" size={40} />, language: "C" },
+      { icon: <SiPython key="python" size={40} />, language: "Python" },
+      {
+        icon: <SiTypescript key="typescript" size={40} />,
+        language: "TypeScript",
+      },
+      { icon: <SiHtml5 key="html5" size={40} />, language: "HTML" },
+      { icon: <SiCss3 key="css3" size={40} />, language: "CSS" },
+      { icon: <SiHaskell key="haskell" size={40} />, language: "Haskell" },
+      { icon: <SiRacket key="racket" size={40} />, language: "Racket" },
+      { icon: <BsFiletypeSql key="sql" size={40} />, language: "SQL" },
+      { icon: <SiSwift key="swift" size={40} />, language: "Swift" },
     ],
     list: true,
     icons: true,
@@ -65,15 +78,27 @@ const CONTENTS = [
     id: 3,
     title: "Frameworks",
     content: [
-      <RiNextjsFill key="nextjs" size={50} />,
-      <SiReact key="react" size={40} />,
-      <DiNodejsSmall key="nodejs" size={50} />,
-      <SiExpress key="express" size={40} />,
-      <SiMongodb key="mongodb" size={40} />,
-      <SiPostgresql key="postgresql" size={40} />,
-      <SiTailwindcss key="tailwindcss" size={40} />,
-      <SiBootstrap key="bootstrap" size={40} />,
-      <SiJunit5 key="junit5" size={40} />,
+      { icon: <RiNextjsFill key="nextjs" size={50} />, language: "Next.js" },
+      {
+        icon: <SiReact key="react" size={40} />,
+        language: "React & React Native",
+      },
+      { icon: <DiNodejsSmall key="nodejs" size={50} />, language: "Node.js" },
+      { icon: <SiExpress key="express" size={40} />, language: "Express" },
+      { icon: <SiMongodb key="mongodb" size={40} />, language: "MongoDB" },
+      {
+        icon: <SiPostgresql key="postgresql" size={40} />,
+        language: "PostgreSQL",
+      },
+      {
+        icon: <SiTailwindcss key="tailwindcss" size={40} />,
+        language: "Tailwind CSS",
+      },
+      {
+        icon: <SiBootstrap key="bootstrap" size={40} />,
+        language: "Bootstrap",
+      },
+      { icon: <SiJunit5 key="junit5" size={40} />, language: "JUnit" },
     ],
     list: true,
     icons: true,
@@ -104,10 +129,32 @@ export const About = () => {
                           : "text-center"
                       } gap-5 mx-auto`}
                     >
-                      {Array.isArray(content.content) &&
-                        content.content.map((listElem, i) => {
-                          return <div key={i}>{listElem}</div>;
-                        })}
+                      {content.icons ? (
+                        <TooltipProvider>
+                          {Array.isArray(content.content) &&
+                            content.content.map((listElem, i) => {
+                              return (
+                                <Tooltip key={i}>
+                                  <TooltipTrigger>
+                                    <div>{listElem.icon}</div>
+                                  </TooltipTrigger>
+                                  <TooltipContent>
+                                    <p>{listElem.language}</p>
+                                  </TooltipContent>
+                                </Tooltip>
+                              );
+                            })}
+                        </TooltipProvider>
+                      ) : (
+                        <div>
+                          {Array.isArray(content.content) &&
+                            content.content.map((listElem, i) => {
+                              if (typeof listElem === "string") {
+                                return <ul key={i}>{listElem}</ul>;
+                              }
+                            })}
+                        </div>
+                      )}
                     </div>
                   ) : (
                     `${content.content}`

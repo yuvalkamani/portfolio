@@ -16,11 +16,26 @@ export function Projects() {
 }
 export const projects = [
   {
-    title: "nexa.",
+    title:
+      "iOS & Swift - The Complete iOS App Development Bootcamp (in progress)",
+    description:
+      "A complete iOS Developer bootcamp consisting of 15 iOS applications.",
+    link: "https://www.udemy.com/course/ios-13-app-development-bootcamp/",
+    tech: "Swift, Xcode, UIKit, SwiftUI, ARKit, CoreML, CoreData",
+  },
+  {
+    title: "nexa. (in progress)",
     description:
       "A complete full stack Notion clone that replicates all core functionalities, including workspace customization, rich text editing, and database management.",
     link: "https://github.com/yuvalkamani/nexa.",
     tech: "Next.js, TypeScript, Convex, Clerk, Tailwind CSS, shadcn",
+  },
+  {
+    title: "StackExchange API in LangChain AI (Merged)",
+    description:
+      "Integrated the StackExchange API into the LangChain AI open source project, enabling seamless retrieval of question-and-answer data from StackExchange sites.",
+    link: "https://github.com/langchain-ai/langchain/pull/14002",
+    tech: "Python, StackExchange API",
   },
   {
     title: "RateMy",
@@ -28,13 +43,6 @@ export const projects = [
       "A full stack web application for University of Toronto students to share anonymous feedback on university courses and professors. Basically Rate My Professors but for courses.",
     link: "https://github.com/yuvalkamani/ratemy",
     tech: "React, Express, Node.js, MongoDB, Tailwind CSS, OpenAI API, Auth0, Stripe, Chart.js",
-  },
-  {
-    title: "StackExchange API in LangChain AI (Marged)",
-    description:
-      "Integrated the StackExchange API into the LangChain AI open source project, enabling seamless retrieval of question-and-answer data from StackExchange sites.",
-    link: "https://github.com/langchain-ai/langchain/pull/14002",
-    tech: "Python, StackExchange API",
   },
   {
     title: "Trade-AI",
@@ -55,7 +63,7 @@ export const projects = [
     description:
       "A native journalling application to easily capture and organize your thoughts, emotions, and experiences on your phone.",
     link: "https://github.com/yuvalkamani/rflect-mobile",
-    tech: "React Native, Figma",
+    tech: "React Native",
   },
   {
     title: "FitHub",
