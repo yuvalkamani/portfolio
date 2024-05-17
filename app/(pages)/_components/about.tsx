@@ -106,7 +106,7 @@ export const About = () => {
                     >
                       {Array.isArray(content.content) &&
                         content.content.map((listElem, i) => {
-                          return <div key={content.id}>{listElem}</div>;
+                          return <div key={i}>{listElem}</div>;
                         })}
                     </div>
                   ) : (
