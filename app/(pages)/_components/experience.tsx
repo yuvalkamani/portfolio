@@ -128,8 +128,8 @@ const CONTENT = [
 const Experience = () => {
   return (
     <div className="sm:h-screen w-screen sm:overflow-auto snap-start text-left py-10 sm:py-[80px] custom-md:py-16 no-scrollbar relative">
+      <BackgroundBeams className="absolute -z-40" />
       <div className="flex flex-col justify-between items-center z-10 relative">
-        <BackgroundBeams className="absolute -z-40" />
         <h1 className="text-3xl sm:text-4xl custom-md:text-5xl font-bold">
           Experience
         </h1>
