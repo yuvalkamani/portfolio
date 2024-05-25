@@ -1,5 +1,5 @@
-import { StickyScroll } from "@/components/ui/stick-scroll-reveal";
 import Image from "next/image";
+import { StickyScroll } from "@/components/ui/stick-scroll-reveal";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const CONTENT = [
