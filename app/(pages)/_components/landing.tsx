@@ -2,6 +2,9 @@
 
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
+import { RiCalendarScheduleFill } from "react-icons/ri";
+import Link from "next/link";
 
 const circleMotion = {
   initial: { x: 0, y: 0 },
@@ -45,7 +48,7 @@ export const Landing = () => {
           variants={circleMotion}
           initial="initial"
           animate="animate"
-          className="absolute w-60 h-60 hidden sm:block left-0 skew-x-8 rounded-3xl bg-gradient-to-r from-[#f5e6ad] to-[#f13c77] blur-[45px] animate-pulse"
+          className="absolute w-60 h-60 hidden sm:block left-0 skew-x-8 rounded-3xl bg-gradient-to-r from-[#e5ce72] to-[#f13c77] blur-[45px] animate-pulse"
         />
         <motion.div
           variants={circleMotion}
@@ -66,7 +69,21 @@ export const Landing = () => {
           className="absolute h-60 w-60 rounded-full hidden sm:block right-0 bg-gradient-to-r from-[#439cfb] to-[#f187fb] blur-[45px] animate-pulse"
         />
       </div>
-      <div>
+      <div className="flex flex-col items-center justify-center gap-10">
+        <div className="w-full h-fit flex justify-center items-center gap-5">
+          <Link target="_blank" href="https://github.com/yuvalkamani">
+            <SiGithub size={30} />
+          </Link>
+          <Link target="_blank" href="https://www.linkedin.com/in/ykamani/">
+            <SiLinkedin size={30} />
+          </Link>
+          <Link target="_blank" href="mailto:yuvalkamani@gmail.com">
+            <SiGmail size={30} />
+          </Link>
+          <Link target="_blank" href="https://calendly.com/yuvalkamani/meeting">
+            <RiCalendarScheduleFill size={30} />
+          </Link>
+        </div>
         <ChevronDown className="h-4 w-4 mb-28 sm:h-5 sm:w-5 md:h-6 md:w-6 animate-bounce" />
       </div>
     </div>
