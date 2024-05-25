@@ -121,20 +121,20 @@ const CONTENTS = [
 
 export const About = () => {
   return (
-    <div className="sm:h-screen w-screen sm:overflow-auto snap-start text-left p-10 sm:p-[80px] custom-md:p-16 no-scrollbar">
+    <div className="sm:h-screen w-screen sm:overflow-auto snap-start text-left p-10 sm:p-[80px] custom-md:px-[150px] no-scrollbar">
       <div className="flex flex-col justify-start items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:pb-10">
           {CONTENTS.map((content, idx) => {
             return (
               <BackgroundGradient
                 key={content.id}
-                className="rounded-2xl w-full p-7 h-full sm:p-10 bg-[#141414]"
+                className="rounded-2xl w-full p-7 h-full sm:p-10 bg-black"
                 evenIndex={idx === 0 || idx === 1}
               >
-                <p className="mt-2 mb-7 text-lg sm:text-2xl font-bold text-center">
+                <p className="mt-2 mb-7 text-2xl text-slate-100 font-bold text-center">
                   {content.title}
                 </p>
-                <div className="text-zinc-300">
+                <div className="text-kg text-slate-300">
                   {content.list != undefined && content.list ? (
                     <div
                       className={`w-2/3 sm:w-2/4 ${

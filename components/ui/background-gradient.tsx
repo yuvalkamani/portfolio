@@ -42,20 +42,16 @@ export const BackgroundGradient = ({
           backgroundSize: animate ? "400% 400%" : undefined,
         }}
         className={cn(
-          "absolute inset-0 rounded-[18px] z-[1] opacity-20 group-hover:opacity-100 blur-xl transition duration-500 will-change-transform",
-          evenIndex &&
-            "bg-[radial-gradient(circle_farthest-side_at_0_100%,#f187fb,transparent),radial-gradient(circle_farthest-side_at_100%_0,#439cfb,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#f187fb,transparent),radial-gradient(circle_farthest-side_at_0_0,#439cfb,#141316)]",
-          !evenIndex &&
-            "bg-[radial-gradient(circle_farthest-side_at_0_100%,#f89b29,transparent),radial-gradient(circle_farthest-side_at_100%_0,#ff0f7b,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#f89b29,transparent),radial-gradient(circle_farthest-side_at_0_0,#ff0f7b,#141316)]"
+          "absolute inset-0 rounded-[18px] z-[1] opacity-20 group-hover:opacity-100 blur-2xl transition duration-500 will-change-transform",
+          evenIndex && "bg-gradient-to-r from-[#439cfb] to-[#f187fb]",
+          !evenIndex && "bg-gradient-to-r from-[#ff0f7b] to-[#f89b29]"
         )}
       />
       <div
         className={cn(
-          "absolute inset-0 rounded-[18px] z-[1] will-change-transform blur-sm",
-          evenIndex &&
-            "bg-[radial-gradient(circle_farthest-side_at_0_100%,#f187fb,transparent),radial-gradient(circle_farthest-side_at_100%_0,#439cfb,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#f187fb,transparent),radial-gradient(circle_farthest-side_at_0_0,#439cfb,#141316)]",
-          !evenIndex &&
-            "bg-[radial-gradient(circle_farthest-side_at_0_100%,#f89b29,transparent),radial-gradient(circle_farthest-side_at_100%_0,#ff0f7b,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#f89b29,transparent),radial-gradient(circle_farthest-side_at_0_0,#ff0f7b,#141316)]"
+          "absolute inset-0 rounded-[18px] opacity-80 z-[1] will-change-transform",
+          evenIndex && "bg-gradient-to-r from-[#439cfb] to-[#f187fb]",
+          !evenIndex && "bg-gradient-to-r from-[#ff0f7b] to-[#f89b29]"
         )}
       />
 
