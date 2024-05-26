@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Yuval Kamani",
   description: "SE & Mathematician",
+  icons: { icon: "/yuval.png" },
 };
 
 export default function RootLayout({
