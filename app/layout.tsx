@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const bdo = localFont({
+  src: [{ path: "../public/fonts/BDOGrotesk-VF.woff2" }],
+  variable: "--font-bdo",
+});
 
 export const metadata: Metadata = {
   title: "Yuval Kamani",
   description: "SE & Mathematician",
-  icons: { icon: "/yuval.png" },
+  icons: { icon: "/1.png" },
 };
 
 export default function RootLayout({
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={bdo.variable}>{children}</body>
     </html>
   );
 }
