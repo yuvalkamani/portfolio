@@ -5,29 +5,23 @@ import Link from "next/link";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import { RiCalendarScheduleFill } from "react-icons/ri";
 import { useScroll } from "framer-motion";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, useMotionValueEvent } from "framer-motion";
 
 const Navbar = () => {
   const { scrollY } = useScroll();
   const [isScrolledPastThreshold, setIsScrolledPastThreshold] = useState(false);
 
-  useEffect(() => {
-    const unsubscribe = scrollY.onChange((latest) => {
-      setIsScrolledPastThreshold(latest > window.innerHeight);
-    });
-
-    console.log(isScrolledPastThreshold);
-    return () => unsubscribe();
-  }, [scrollY, isScrolledPastThreshold]);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsScrolledPastThreshold(latest > window.innerHeight);
+  });
 
   return (
     <motion.div
-      initial={{ y: -82 }}
-      animate={{ y: isScrolledPastThreshold ? 0 : -82 }}
-      className={`sticky top-0 flex justify-between items-center w-full p-4 bg-white shadow-lg z-50 ${
-        isScrolledPastThreshold ? "block" : "hidden"
-      }`}
+      initial={{ y: -100 }}
+      animate={{ y: isScrolledPastThreshold ? 0 : -100 }}
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      className="sticky top-0 flex justify-between items-center w-full p-4 bg-white shadow-lg z-50"
     >
       <div className="flex gap-2 items-center">
         <Image
