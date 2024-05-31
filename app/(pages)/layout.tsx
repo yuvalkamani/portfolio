@@ -1,5 +1,7 @@
-const PageLayout = ({ children }: { children: React.ReactNode }) => {
-  return <main>{children}</main>;
-};
-
-export default PageLayout;
+export default function PageLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <div className="font-bdo no-scrollbar">{children}</div>;
+}
