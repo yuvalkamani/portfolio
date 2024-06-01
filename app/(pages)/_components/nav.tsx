@@ -37,7 +37,7 @@ const Navbar = () => {
           <div className="text-xs text-neutral-500">Software Engineer</div>
         </div>
       </div>
-      <div className="flex gap-3 items-center text-neutral-500">
+      <div className="flex gap-3 items-center text-neutral-400">
         <Link
           target="_blank"
           href="https://github.com/yuvalkamani"
