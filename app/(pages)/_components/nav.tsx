@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isScrolledPastThreshold, setIsScrolledPastThreshold] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setIsScrolledPastThreshold(latest > window.innerHeight);
+    setIsScrolledPastThreshold(latest > window.innerHeight - 200);
   });
 
   return (
@@ -25,7 +25,7 @@ const Navbar = () => {
     >
       <div className="flex gap-3 items-center">
         <Image
-          src="/2.png"
+          src="/1.png"
           alt="memoji"
           width={50}
           height={50}
@@ -37,34 +37,34 @@ const Navbar = () => {
           <div className="text-xs text-neutral-500">Software Engineer</div>
         </div>
       </div>
-      <div className="flex gap-2 items-center text-neutral-500">
+      <div className="flex gap-3 items-center text-neutral-500">
         <Link
           target="_blank"
           href="https://github.com/yuvalkamani"
           className="hover:text-black"
         >
-          <SiGithub size={20} />
+          <SiGithub size={25} />
         </Link>
         <Link
           target="_blank"
           href="https://www.linkedin.com/in/ykamani/"
           className="hover:text-black"
         >
-          <SiLinkedin size={20} />
+          <SiLinkedin size={25} />
         </Link>
         <Link
           target="_blank"
           href="mailto:yuvalkamani@gmail.com"
           className="hover:text-black"
         >
-          <SiGmail size={20} />
+          <SiGmail size={25} />
         </Link>
         <Link
           target="_blank"
           href="https://calendly.com/yuvalkamani/meeting"
           className="hover:text-black"
         >
-          <RiCalendarScheduleFill size={20} />
+          <RiCalendarScheduleFill size={25} />
         </Link>
       </div>
     </motion.div>
