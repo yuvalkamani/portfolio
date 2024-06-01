@@ -18,10 +18,10 @@ const Navbar = () => {
 
   return (
     <motion.div
-      initial={{ y: -100 }}
-      animate={{ y: isScrolledPastThreshold ? 0 : -100 }}
+      initial={{ y: -200 }}
+      animate={{ y: isScrolledPastThreshold ? 0 : -200 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="sticky top-0 flex justify-between items-center w-full p-4 bg-white shadow-lg z-50"
+      className="fixed top-0 left-0 w-full flex justify-between items-center p-4 bg-white shadow-lg z-50"
     >
       <div className="flex gap-2 items-center">
         <Image

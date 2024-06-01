@@ -1,10 +1,11 @@
 import Navbar from "./_components/nav";
+import Landing from "./_components/landing";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className="h-screen"></div>
+      <Landing />
       <div className="h-screen "></div>
       <div className="h-screen "></div>
     </div>
