@@ -23,7 +23,7 @@ const Navbar = () => {
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       className="fixed top-0 left-0 w-full flex justify-between items-center p-4 bg-white shadow-lg z-50"
     >
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-3 items-center">
         <Image
           src="/2.png"
           alt="memoji"
@@ -31,6 +31,7 @@ const Navbar = () => {
           height={50}
           objectFit="contain"
         />
+        <div className="h-[40px] w-[1px] bg-neutral-300" />
         <div>
           <div className="text-base">Yuval Kamani</div>
           <div className="text-xs text-neutral-500">Software Engineer</div>
