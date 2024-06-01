@@ -3,11 +3,11 @@ import Landing from "./_components/landing";
 
 export default function Home() {
   return (
-    <div>
+    <div className="dark:bg-black bg-white overflow-hidden">
       <Navbar />
       <Landing />
-      <div className="h-screen "></div>
-      <div className="h-screen "></div>
+      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div>
     </div>
   );
 }

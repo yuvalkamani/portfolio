@@ -9,7 +9,7 @@ import { RiCalendarScheduleFill } from "react-icons/ri";
 const Landing = () => {
   return (
     <motion.div
-      className="h-screen w-screen flex flex-col-reverse sm:flex-row items-center justify-center gap-10 md:justify-center sm:justify-around p-10"
+      className="h-screen w-screen flex flex-col-reverse sm:flex-row items-center justify-center gap-10 md:justify-center sm:justify-around p-10 no-scrollbar"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -91,7 +91,15 @@ const Landing = () => {
           alt="memoji"
           width={200}
           height={200}
-          className="w-[225px] h-[225px] sm:w-[170px] sm:h-[170px] md:w-[225px] md:h-[225px] lg:w-[300px] lg:h-[300px]"
+          className="w-[225px] h-[225px] sm:w-[170px] sm:h-[170px] md:w-[225px] md:h-[225px] lg:w-[300px] lg:h-[300px] dark:hidden"
+          objectFit="contain"
+        />
+        <Image
+          src="/2-dark.png"
+          alt="memoji"
+          width={200}
+          height={200}
+          className="w-[225px] h-[225px] sm:w-[170px] sm:h-[170px] md:w-[225px] md:h-[225px] lg:w-[300px] lg:h-[300px] hidden dark:block"
           objectFit="contain"
         />
       </motion.div>
