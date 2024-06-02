@@ -35,7 +35,7 @@ const About = () => {
       </div>
       <div className="sm:w-1/2 text-left sm:pr-5">
         <div className="text-[15px] text-neutral-600 dark:text-neutral-300">
-          I'm Yuval, a software engineer fueled by coffee, code, and a
+          I am Yuval, a software engineer fueled by coffee, code, and a
           never-ending educational journey, occasionally sidetracked by
           bingewatching shows (currently watching Young Sheldon). I recently
           graduated from UofT with a degree in Computer Science and Mathematics.
