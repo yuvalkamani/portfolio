@@ -5,7 +5,7 @@ import Link from "next/link";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import { RiCalendarScheduleFill } from "react-icons/ri";
 import { useScroll } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, useMotionValueEvent } from "framer-motion";
 import { CgDarkMode } from "react-icons/cg";
 import { useTheme } from "next-themes";
@@ -32,7 +32,7 @@ const Navbar = () => {
       initial={{ y: -200 }}
       animate={{ y: isScrolledPastThreshold ? 0 : -200 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="fixed top-0 left-0 w-full flex justify-between items-center bg-white dark:bg-black p-4 shadow-lg dark:shadow-neutral-800 z-50"
+      className="fixed top-0 left-0 w-full flex justify-between items-center bg-white dark:bg-black p-4 shadow-lg dark:shadow-neutral-900 z-50"
     >
       <div className="flex gap-2 sm:gap-3 items-center">
         <Image
@@ -40,16 +40,14 @@ const Navbar = () => {
           alt="memoji"
           width={50}
           height={50}
-          objectFit="contain"
-          className="dark:hidden"
+          className="dark:hidden object-contain"
         />
         <Image
           src="/1-dark.png"
           alt="memoji"
           width={50}
           height={50}
-          objectFit="contain"
-          className="dark:block hidden"
+          className="dark:block hidden object-contain"
         />
         <div className="h-[40px] w-[1px] bg-neutral-300" />
         <div>

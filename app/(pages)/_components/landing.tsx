@@ -5,8 +5,20 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import { RiCalendarScheduleFill } from "react-icons/ri";
+import { CgDarkMode } from "react-icons/cg";
+import { useTheme } from "next-themes";
 
 const Landing = () => {
+  const { theme, setTheme } = useTheme();
+
+  const darkModeHandler = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
   return (
     <motion.div
       className="h-screen w-screen flex flex-col-reverse sm:flex-row items-center justify-center gap-10 md:justify-center sm:justify-around p-10 no-scrollbar"
@@ -38,31 +50,37 @@ const Landing = () => {
             I like designing and solving things.
           </div>
           <div className="text-neutral-400 flex gap-5 sm:gap-3 justify-center sm:justify-end items-center text-[12px] py-5 sm:pt-2">
+            <CgDarkMode
+              size={25}
+              className="text-neutral-400 hover:text-black dark:hover:text-white"
+              onClick={darkModeHandler}
+            />
+            <div className="w-[1px] h-[25px] bg-white"></div>
             <Link
               target="_blank"
               href="https://github.com/yuvalkamani"
-              className="hover:text-black"
+              className="hover:text-black dark:hover:text-white"
             >
               <SiGithub size={25} />
             </Link>
             <Link
               target="_blank"
               href="https://www.linkedin.com/in/ykamani/"
-              className="hover:text-black"
+              className="hover:text-black dark:hover:text-white"
             >
               <SiLinkedin size={25} />
             </Link>
             <Link
               target="_blank"
               href="mailto:yuvalkamani@gmail.com"
-              className="hover:text-black"
+              className="hover:text-black dark:hover:text-white"
             >
               <SiGmail size={25} />
             </Link>
             <Link
               target="_blank"
               href="https://calendly.com/yuvalkamani/meeting"
-              className="hover:text-black"
+              className="hover:text-black dark:hover:text-white"
             >
               <RiCalendarScheduleFill size={25} />
             </Link>
@@ -91,16 +109,14 @@ const Landing = () => {
           alt="memoji"
           width={200}
           height={200}
-          className="w-[225px] h-[225px] sm:w-[170px] sm:h-[170px] md:w-[225px] md:h-[225px] lg:w-[300px] lg:h-[300px] dark:hidden"
-          objectFit="contain"
+          className="w-[225px] h-[225px] sm:w-[170px] sm:h-[170px] md:w-[225px] md:h-[225px] lg:w-[300px] lg:h-[300px] dark:hidden object-contain"
         />
         <Image
           src="/2-dark.png"
           alt="memoji"
           width={200}
           height={200}
-          className="w-[225px] h-[225px] sm:w-[170px] sm:h-[170px] md:w-[225px] md:h-[225px] lg:w-[300px] lg:h-[300px] hidden dark:block"
-          objectFit="contain"
+          className="w-[225px] h-[225px] sm:w-[170px] sm:h-[170px] md:w-[225px] md:h-[225px] lg:w-[300px] lg:h-[300px] hidden dark:block object-contain"
         />
       </motion.div>
     </motion.div>
