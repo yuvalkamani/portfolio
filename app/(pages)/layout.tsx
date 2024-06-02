@@ -6,9 +6,9 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="font-bdo overflow-hidden">
+    <div className="font-bdo">
       <Navbar />
-      <main>{children}</main>
+      <main className="px-10 pb-10">{children}</main>
     </div>
   );
 }

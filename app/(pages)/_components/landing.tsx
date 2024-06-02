@@ -10,7 +10,7 @@ import DarkModeToggle from "./dark-mode-toggle";
 const Landing = () => {
   return (
     <motion.div
-      className="h-screen w-screen flex flex-col-reverse sm:flex-row items-center justify-center gap-10 md:justify-center sm:justify-around p-10 no-scrollbar"
+      className="h-screen w-full flex flex-col-reverse sm:flex-row items-center justify-center gap-10 md:justify-center sm:justify-around no-scrollbar"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -79,7 +79,7 @@ const Landing = () => {
         transition={{ duration: 0.5 }}
       />
       <motion.div
-        className="w-3/4 h-[2px] bg-neutral-400 sm:hidden"
+        className="w-3/4 h-[2px] bg-neutral-300 dark:bg-neutral-500 sm:hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
