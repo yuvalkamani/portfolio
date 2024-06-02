@@ -40,7 +40,7 @@ const Landing = () => {
           </div>
           <div className="text-neutral-400 flex gap-5 sm:gap-3 justify-center sm:justify-end items-center text-[12px] py-5 sm:pt-2">
             <DarkModeToggle />
-            <div className="w-[1px] h-[25px] bg-white"></div>
+            <div className="w-[1px] h-[25px] bg-neutral-400" />
             <Link
               target="_blank"
               href="https://github.com/yuvalkamani"
@@ -73,13 +73,13 @@ const Landing = () => {
         </div>
       </motion.div>
       <motion.div
-        className="w-[2px] sm:h-[80px] md:h-[150px] bg-neutral-300 hidden sm:block"
+        className="w-[2px] sm:h-[80px] md:h-[150px] bg-neutral-400 hidden sm:block"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       />
       <motion.div
-        className="w-3/4 h-[2px] bg-neutral-300 sm:hidden"
+        className="w-3/4 h-[2px] bg-neutral-400 sm:hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
