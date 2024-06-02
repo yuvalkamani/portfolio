@@ -25,7 +25,7 @@ const Landing = () => {
           <div className="md:text-[60px] sm:text-[50px] text-[60px] font-bold">
             Yuval <span className="hidden sm:inline-block">Kamani</span>
           </div>
-          <div className="text-[30px] text-neutral-500">
+          <div className="text-[30px] text-neutral-500 dark:text-neutral-300">
             Software Engineer
             <span className="text-[17px] text-neutral-400 hidden sm:block">
               {" "}
