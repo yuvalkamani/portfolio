@@ -7,25 +7,15 @@ import { RiCalendarScheduleFill } from "react-icons/ri";
 import { useScroll } from "framer-motion";
 import { useState } from "react";
 import { motion, useMotionValueEvent } from "framer-motion";
-import { CgDarkMode } from "react-icons/cg";
-import { useTheme } from "next-themes";
+import DarkModeToggle from "./dark-mode-toggle";
 
 const Navbar = () => {
-  const { theme, setTheme } = useTheme();
   const { scrollY } = useScroll();
   const [isScrolledPastThreshold, setIsScrolledPastThreshold] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolledPastThreshold(latest > window.innerHeight - 200);
   });
-
-  const darkModeHandler = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
 
   return (
     <motion.div
@@ -55,17 +45,9 @@ const Navbar = () => {
           <div className="text-xs text-neutral-400">Software Engineer</div>
         </div>
       </div>
-      <CgDarkMode
-        size={25}
-        className="text-neutral-400 hover:text-black dark:hover:text-white hidden sm:block"
-        onClick={darkModeHandler}
-      />
+      <DarkModeToggle className="hidden sm:block" />
       <div className="flex gap-3 items-center text-neutral-400">
-        <CgDarkMode
-          size={25}
-          className="text-neutral-400 hover:text-black dark:hover:text-white sm:hidden block"
-          onClick={darkModeHandler}
-        />
+        <DarkModeToggle className="sm:hidden block" />
         <Link
           target="_blank"
           href="https://github.com/yuvalkamani"

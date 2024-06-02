@@ -5,20 +5,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import { RiCalendarScheduleFill } from "react-icons/ri";
-import { CgDarkMode } from "react-icons/cg";
-import { useTheme } from "next-themes";
+import DarkModeToggle from "./dark-mode-toggle";
 
 const Landing = () => {
-  const { theme, setTheme } = useTheme();
-
-  const darkModeHandler = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
-
   return (
     <motion.div
       className="h-screen w-screen flex flex-col-reverse sm:flex-row items-center justify-center gap-10 md:justify-center sm:justify-around p-10 no-scrollbar"
@@ -50,11 +39,7 @@ const Landing = () => {
             I like designing and solving things.
           </div>
           <div className="text-neutral-400 flex gap-5 sm:gap-3 justify-center sm:justify-end items-center text-[12px] py-5 sm:pt-2">
-            <CgDarkMode
-              size={25}
-              className="text-neutral-400 hover:text-black dark:hover:text-white"
-              onClick={darkModeHandler}
-            />
+            <DarkModeToggle />
             <div className="w-[1px] h-[25px] bg-white"></div>
             <Link
               target="_blank"
