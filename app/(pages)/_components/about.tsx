@@ -45,7 +45,6 @@ const About = () => {
           <li>⚽️ Football</li>
           <li>🏎 Formula 1</li>
           <li>✈️ Traveling</li>
-          <li>🎶 Music</li>
           <li>🍿 Netflix</li>
           <li>🧗🏼 Hiking</li>
         </ul>
