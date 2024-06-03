@@ -29,7 +29,6 @@ import {
   SiDrupal,
   SiOpenai,
 } from "react-icons/si";
-import { BsFiletypeSql } from "react-icons/bs";
 import { RiNextjsFill } from "react-icons/ri";
 
 const ICON_SIZE = 30;
@@ -100,29 +99,39 @@ const About = () => {
   }, [controls, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      className="w-full flex flex-col sm:flex-row flex-wrap justify-around items-start custom-md:px-44"
-      initial="hidden"
-      animate={controls}
-      variants={{
-        hidden: { y: 50, opacity: 0 },
-        visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
-      }}
-    >
-      <div className="sm:w-1/2 text-center">
-        <div className="md:text-[60px] sm:text-[50px] text-[60px] font-bold sm:sticky sm:top-24">
+    <div className="w-full flex flex-col sm:flex-row flex-wrap justify-around custom-md:px-44 pb-12">
+      <div className="sm:w-1/2 sm:text-center text-left">
+        <motion.div
+          className="md:text-[60px] sm:text-[50px] text-[60px] font-bold sm:sticky sm:top-24"
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={{
+            hidden: { y: 50, opacity: 0 },
+            visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+          }}
+        >
           About
-        </div>
+        </motion.div>
       </div>
-      <div className="sm:w-1/2 text-left">
+      <motion.div
+        className="sm:w-1/2 text-left mt-3"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={{
+          hidden: { y: 50, opacity: 0 },
+          visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+        }}
+      >
         <div className="text-[15px] text-neutral-500 dark:text-neutral-300">
           I am Yuval, a software engineer fueled by coffee, code, and a
           never-ending educational journey, occasionally sidetracked by
           bingewatching shows (currently watching Young Sheldon). I recently
           graduated from UofT with a degree in Computer Science and Mathematics.
         </div>
-        <div className="text-[15px] text-neutral-400 py-5">INTERESTS</div>
+        <div className="w-full h-[1px] bg-neutral-300 dark:bg-neutral-500 mt-6 mb-2" />
+        <div className="text-[15px] text-neutral-400 pb-5">INTERESTS</div>
         <ul className="text-[15px] text-neutral-500 dark:text-neutral-300">
           <li>⚽️ Football</li>
           <li>🏎 Formula 1</li>
@@ -130,14 +139,17 @@ const About = () => {
           <li>🍿 Netflix</li>
           <li>🧗🏼 Hiking</li>
         </ul>
-        <hr className="mt-5 h-[1px]" />
-        <div className="text-[15px] text-neutral-400 py-5">
+        <div className="w-full h-[1px] bg-neutral-300 dark:bg-neutral-500 mt-6 mb-2" />
+        <div className="text-[15px] text-neutral-400 pb-5">
           LANGUAGES <span className="text-[10px]"></span>
         </div>
         <div className="text-neutral-400 w-full flex gap-3 flex-wrap">
           {languages.map((lang) => {
             return (
-              <div className="hover:text-black dark:hover:text-white">
+              <div
+                key={lang.language}
+                className="hover:text-black dark:hover:text-white"
+              >
                 {lang.icon}
               </div>
             );
@@ -149,14 +161,17 @@ const About = () => {
         <div className="text-neutral-400 w-full flex gap-3 flex-wrap">
           {frameworks.map((framework) => {
             return (
-              <div className="hover:text-black dark:hover:text-white">
+              <div
+                key={framework.language}
+                className="hover:text-black dark:hover:text-white"
+              >
                 {framework.icon}
               </div>
             );
           })}
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

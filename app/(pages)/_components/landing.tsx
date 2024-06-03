@@ -73,7 +73,7 @@ const Landing = () => {
         </div>
       </motion.div>
       <motion.div
-        className="w-[1px] sm:h-[80px] md:h-[150px] bg-neutral-400 hidden sm:block"
+        className="w-[1px] sm:h-[80px] md:h-[150px] bg-neutral-300 dark:bg-neutral-500 hidden sm:block"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
