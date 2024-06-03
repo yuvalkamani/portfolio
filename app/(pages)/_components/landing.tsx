@@ -25,20 +25,19 @@ const Landing = () => {
           <div className="md:text-[60px] sm:text-[50px] text-[60px] font-bold">
             Yuval <span className="hidden sm:inline-block">Kamani</span>
           </div>
-          <div className="text-[30px] text-neutral-500 dark:text-neutral-300">
-            Software Engineer
-            <span className="text-[17px] text-neutral-400 hidden sm:block">
-              {" "}
+          <div className="text-[25px] sm:text-[30px] text-neutral-500 dark:text-neutral-300">
+            Software Engineer{" "}
+            <span className="text-[17px] text-neutral-400 hidden sm:inline-block">
               (and Mathematician).
             </span>
           </div>
           <div className="text-[17px] text-neutral-400 sm:hidden">
             (and Mathematician).
           </div>
-          <div className="text-[15px] text-neutral-400 pt-3">
+          <div className="text-[15px] text-neutral-400 ">
             I like designing and solving things.
           </div>
-          <div className="text-neutral-400 flex gap-5 sm:gap-3 justify-center sm:justify-end items-center text-[12px] py-5 sm:pt-2">
+          <div className="text-neutral-400 flex gap-5 sm:gap-3 justify-center sm:justify-end items-center text-[12px] py-5 sm:pt-7">
             <DarkModeToggle />
             <div className="w-[1px] h-[25px] bg-neutral-400" />
             <Link
