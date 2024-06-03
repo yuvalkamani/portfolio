@@ -59,7 +59,7 @@ const frameworks = [
     language: "React & React Native",
   },
   {
-    icon: <DiNodejsSmall key="nodejs" size={ICON_SIZE} />,
+    icon: <DiNodejsSmall key="nodejs" size={ICON_SIZE + 5} />,
     language: "Node.js",
   },
   { icon: <SiExpress key="express" size={ICON_SIZE} />, language: "Express" },
@@ -99,7 +99,7 @@ const About = () => {
   }, [controls, inView]);
 
   return (
-    <div className="w-full flex flex-col sm:flex-row flex-wrap justify-around custom-md:px-44 pb-12">
+    <div className="w-full flex flex-col sm:flex-row flex-wrap justify-around custom-md:px-36 pb-12">
       <div className="sm:w-1/2 sm:text-center text-left">
         <motion.div
           className="md:text-[60px] sm:text-[50px] text-[60px] font-bold sm:sticky sm:top-24"
@@ -115,7 +115,7 @@ const About = () => {
         </motion.div>
       </div>
       <motion.div
-        className="sm:w-1/2 text-left mt-3"
+        className="sm:w-1/2 text-left mt-3 pl-4"
         ref={ref}
         initial="hidden"
         animate={controls}
@@ -143,7 +143,7 @@ const About = () => {
         <div className="text-[15px] text-neutral-400 pb-5">
           LANGUAGES <span className="text-[10px]"></span>
         </div>
-        <div className="text-neutral-400 w-full flex gap-3 flex-wrap">
+        <div className="text-neutral-400 w-full flex gap-3 flex-wrap items-center">
           {languages.map((lang) => {
             return (
               <div
@@ -158,7 +158,7 @@ const About = () => {
         <div className="text-[15px] text-neutral-400 py-5">
           FRAMEWORKS & TOOLS <span className="text-[10px]"></span>
         </div>
-        <div className="text-neutral-400 w-full flex gap-3 flex-wrap">
+        <div className="text-neutral-400 w-full flex gap-3 flex-wrap items-center">
           {frameworks.map((framework) => {
             return (
               <div
