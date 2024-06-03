@@ -107,7 +107,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-neutral-500 dark:text-neutral-300 text-[15px]",
+        "mt-8 text-neutral-500 dark:text-neutral-300 text-[14px]",
         className
       )}
     >
@@ -124,7 +124,7 @@ export const CardTechnologies = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className={cn("mt-2 text-[13px] text-neutral-400", className)}>
+    <div className={cn("mt-2 text-[14px] text-neutral-400", className)}>
       {children}
     </div>
   );

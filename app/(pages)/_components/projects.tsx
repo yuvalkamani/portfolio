@@ -101,7 +101,7 @@ const Projects = () => {
 
   return (
     <div className="w-full flex flex-col sm:flex-row flex-wrap justify-around pb-12 custom-md:px-36">
-      <div className="sm:w-1/2 sm:text-center text-left">
+      <div className="sm:w-1/3 sm:text-right text-left">
         <motion.div
           className="md:text-[60px] sm:text-[50px] text-[60px] font-bold sm:sticky sm:top-24"
           ref={ref}
