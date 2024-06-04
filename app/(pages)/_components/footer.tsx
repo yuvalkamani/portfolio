@@ -4,7 +4,6 @@ import {
   SiGmail,
   SiSwift,
   SiAmazonaws,
-  SiXcode,
 } from "react-icons/si";
 import {
   Tooltip,
@@ -28,7 +27,7 @@ const Footer = () => {
       <div className="flex flex-col w-full p-4 sm:p-12 gap-12">
         <div className="flex justify-between sm:flex-row flex-col gap-5">
           <div className="flex flex-col gap-3 items-start">
-            <div>Let's discuss</div>
+            <div>Get in touch</div>
             <div className="flex gap-3 items-center">
               <Link
                 target="_blank"
