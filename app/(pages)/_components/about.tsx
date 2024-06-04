@@ -27,9 +27,15 @@ import {
   SiDocker,
   SiFigma,
   SiDrupal,
-  SiOpenai,
+  SiAmazonaws,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const ICON_SIZE = 30;
 
@@ -62,6 +68,7 @@ const frameworks = [
   { icon: <SiDocker size={ICON_SIZE} />, language: "Docker" },
   { icon: <SiFigma size={ICON_SIZE} />, language: "Figma" },
   { icon: <SiDrupal size={ICON_SIZE} />, language: "Drupal" },
+  { icon: <SiAmazonaws size={ICON_SIZE} />, language: "AWS" },
 ];
 
 const About = () => {
@@ -112,7 +119,7 @@ const About = () => {
           graduated from UofT with a degree in Computer Science and Mathematics.
         </div>
         <div className="w-full h-[1px] bg-neutral-300 dark:bg-neutral-500 mt-6 mb-2" />
-        <div className="text-[15px] text-neutral-400 pb-5">INTERESTS</div>
+        <div className="text-[15px] text-neutral-400 pb-5">Interests</div>
         <ul className="text-[15px] text-neutral-500 dark:text-neutral-300">
           <li>⚽️ Football</li>
           <li>🏎 Formula 1</li>
@@ -121,30 +128,36 @@ const About = () => {
           <li>🧗🏼 Hiking</li>
         </ul>
         <div className="w-full h-[1px] bg-neutral-300 dark:bg-neutral-500 mt-6 mb-2" />
-        <div className="text-[15px] text-neutral-400 pb-5">
-          LANGUAGES <span className="text-[10px]"></span>
-        </div>
+        <div className="text-[15px] text-neutral-400 pb-5">Languages</div>
         <div className="text-neutral-400 w-full flex gap-3 flex-wrap items-center">
           {languages.map((lang) => (
-            <div
-              key={lang.language}
-              className="hover:text-black dark:hover:text-white"
-            >
-              {lang.icon}
-            </div>
+            <TooltipProvider key={lang.language}>
+              <Tooltip>
+                <TooltipTrigger className="hover:text-black dark:hover:text-white">
+                  {lang.icon}
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{lang.language}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           ))}
         </div>
         <div className="text-[15px] text-neutral-400 py-5">
-          FRAMEWORKS & TOOLS <span className="text-[10px]"></span>
+          Frameworks & Tools <span className="text-[10px]"></span>
         </div>
         <div className="text-neutral-400 w-full flex gap-3 flex-wrap items-center">
           {frameworks.map((framework) => (
-            <div
-              key={framework.language}
-              className="hover:text-black dark:hover:text-white"
-            >
-              {framework.icon}
-            </div>
+            <TooltipProvider key={framework.language}>
+              <Tooltip>
+                <TooltipTrigger className="hover:text-black dark:hover:text-white">
+                  {framework.icon}
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{framework.language}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           ))}
         </div>
       </motion.div>

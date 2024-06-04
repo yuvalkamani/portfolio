@@ -74,7 +74,7 @@ const Experience = () => {
           animate={controls}
           variants={animationVariants}
         >
-          Experience
+          Work
         </motion.div>
       </div>
       <motion.div

@@ -4,13 +4,27 @@ import {
   SiGmail,
   SiSwift,
   SiAmazonaws,
+  SiXcode,
 } from "react-icons/si";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { RiCalendarScheduleFill } from "react-icons/ri";
 import Link from "next/link";
 
+const ICON_SIZE = 25;
+
+const learning = [
+  { icon: <SiSwift size={ICON_SIZE} />, language: "Swift" },
+  { icon: <SiAmazonaws size={ICON_SIZE} />, language: "AWS" },
+];
+
 const Footer = () => {
   return (
-    <div className="w-full h-fit rounded-xl bg-neutral-100 dark:shadow-none dark:bg-[#0b0b0b] text-neutral-400">
+    <div className="w-full h-fit rounded-xl bg-neutral-100 dark:bg-[#0b0b0b] text-neutral-400">
       <div className="flex flex-col w-full p-4 sm:p-12 gap-12">
         <div className="flex justify-between sm:flex-row flex-col gap-5">
           <div className="flex flex-col gap-3 items-start">
@@ -49,8 +63,18 @@ const Footer = () => {
           <div className="flex flex-col gap-3 sm:items-end items-start">
             <div>Currently learning</div>
             <div className="flex gap-3 items-center">
-              <SiSwift size={25} />
-              <SiAmazonaws size={25} />
+              {learning.map((lang) => (
+                <TooltipProvider key={lang.language}>
+                  <Tooltip>
+                    <TooltipTrigger className="hover:text-black dark:hover:text-white">
+                      {lang.icon}
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>{lang.language}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              ))}
             </div>
           </div>
         </div>
