@@ -11,7 +11,7 @@ const bdo = localFont({
 export const metadata: Metadata = {
   title: "Yuval Kamani",
   description: "SE & Mathematician",
-  icons: { icon: "/1.png" },
+  icons: { icon: "/favicon.png" },
 };
 
 export default function RootLayout({
