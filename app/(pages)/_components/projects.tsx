@@ -2,10 +2,10 @@
 
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 
-export const projects = [
+const projects = [
   {
     title:
       "iOS & Swift - The Complete iOS App Development Bootcamp (in progress)",
@@ -99,6 +99,14 @@ const Projects = () => {
     }
   }, [controls, inView]);
 
+  const animationVariants = useMemo(
+    () => ({
+      hidden: { y: 50, opacity: 0 },
+      visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+    }),
+    []
+  );
+
   return (
     <div className="w-full flex flex-col sm:flex-row flex-wrap justify-around pb-12 custom-md:px-36">
       <div className="sm:w-1/3 sm:text-right text-left">
@@ -107,10 +115,7 @@ const Projects = () => {
           ref={ref}
           initial="hidden"
           animate={controls}
-          variants={{
-            hidden: { y: 50, opacity: 0 },
-            visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
-          }}
+          variants={animationVariants}
         >
           Projects
         </motion.div>
@@ -120,12 +125,9 @@ const Projects = () => {
         ref={ref}
         initial="hidden"
         animate={controls}
-        variants={{
-          hidden: { y: 50, opacity: 0 },
-          visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
-        }}
+        variants={animationVariants}
       >
-        <HoverEffect items={projects} />
+        <HoverEffect items={projects} project={true} />
       </motion.div>
     </div>
   );

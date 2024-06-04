@@ -8,6 +8,7 @@ import { useState } from "react";
 export const HoverEffect = ({
   items,
   className,
+  project,
 }: {
   items: {
     title: string;
@@ -16,6 +17,7 @@ export const HoverEffect = ({
     tech?: string;
   }[];
   className?: string;
+  project?: boolean;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -26,7 +28,7 @@ export const HoverEffect = ({
           href={item?.link}
           key={item?.link}
           className={`relative group block p-2 h-full w-full ${
-            idx === 2 ? "xl:col-span-2" : "xl:col-span-1"
+            project && idx === 2 ? "xl:col-span-2" : "xl:col-span-1"
           }`}
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
