@@ -8,35 +8,35 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 const experience = [
   {
     title: "Programming Engineer",
-    link: "",
+    link: "https://www.siemens.com",
     tech: "Siemens | Jan. 2023 - Present",
     description:
       "Developed custom digital forms and workflow automation solutions that streamlined maintenance operations, reducing errors and increasing efficiency. Nominated for the Siemens 2023 Excellence Award.",
   },
   {
     title: "Teaching Assistant",
-    link: "",
+    link: "https://www.utoronto.ca",
     tech: "University of Toronto | Jan. 2022 - May. 2024",
     description:
       "Conducted interactive tutorials and review seminars, effectively explaining complex concepts to hundreds of students, significantly improving their performance and preparedness.",
   },
   {
     title: "Web Administrator",
-    link: "",
+    link: "https://www.utsc.utoronto.ca/home/",
     tech: "University of Toronto Scarborough | May 2022 - Sep. 2022",
     description:
       "Led website migrations and performance upgrades while delivering visually appealing designs and ensuring comprehensive quality through automated testing.",
   },
   {
     title: "Director of Technology",
-    link: "",
+    link: "https://www.mtautsc.com",
     tech: "MTA | Sep. 2023 - May 2024",
     description:
       "Managed the technical aspect of webinars and competitions, streamlining operations, enhancing participant experience through innovative solutions, and creating a collaborative team environment to deliver high-quality events.",
   },
   {
     title: "Web Development Specialist",
-    link: "",
+    link: "https://www.sig-uoft.com",
     tech: "SIG | Sep. 2021 - May 2023",
     description:
       "Designed and developed websites leveraging external resources, including a high-traffic platform for a major case competition, collaborating with associations to improve user experience, drive sales, and achieve a 400% increase in website traffic.",
