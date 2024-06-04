@@ -45,9 +45,9 @@ const Navbar = () => {
           <div className="text-xs text-neutral-400">Software Engineer</div>
         </div>
       </div>
-      <DarkModeToggle className="hidden sm:block" />
       <div className="flex gap-3 items-center text-neutral-400">
-        <DarkModeToggle className="sm:hidden block" />
+        <DarkModeToggle />
+        <div className="w-[1px] h-[25px] bg-neutral-400 hidden sm:block" />
         <Link
           target="_blank"
           href="https://github.com/yuvalkamani"

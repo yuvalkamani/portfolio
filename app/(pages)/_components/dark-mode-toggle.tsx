@@ -1,4 +1,4 @@
-import { CgDarkMode } from "react-icons/cg";
+import { MdOutlineLightMode } from "react-icons/md";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 
@@ -14,7 +14,7 @@ const DarkModeToggle = ({ className }: { className?: string }) => {
   };
 
   return (
-    <CgDarkMode
+    <MdOutlineLightMode
       size={25}
       className={cn(
         "text-neutral-400 hover:text-black dark:hover:text-white",
